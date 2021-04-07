@@ -26,7 +26,27 @@
       </div>
       <form id="form1" runat="server" onsubmit="AddToCart()">
          <div class="grid wide">
-              <asp:Literal ID="detailedProduct" runat="server"></asp:Literal>
+              <%Response.Write(@"<div class='row' style='margin - top: 100px;'>
+                  <div class='col l-6' id='product_img' runat='server'>
+                  <img style='width:100%;' src = '" + curentProduct.Image + @"' alt='Alternate Text'/>
+               </div>
+               <div class='col l-6'>
+                  <div class='Body'>
+                     <div class='Main_Body'>
+                        <div class='Left_Main_Body'>
+                           <div class='Khunggia'>
+                              <div class='Giasp'>
+                                 <span class='Giacuthe'>" + curentProduct.Name + @"</span>
+                              </div>
+                              <div class='Open_Time'>
+                                 <div class='open'>
+                                    <span class='stt online' title='địa chỉ'>" + curentProduct.Address + @"</span>
+                                 </div>
+                                 <div class='time'>
+                                    <span style='font-weight:bold; font-size:1.5rem;'>" + curentProduct.Price + @"CN</span>
+                                 </div>
+                              </div>
+                           </div>"); %>
              
              <div class='Khungmua themvaogiohang'>
                               <div class='NutMua'>

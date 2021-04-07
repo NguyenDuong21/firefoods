@@ -10,16 +10,19 @@ namespace firefood
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public List<CartProduct> products;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
             if (Session["cart"] != null)
             {
-                DataTable cart = (DataTable)Session["cart"];
+                products = (List<CartProduct>)Session["cart"];
+                /*DataTable cart = (DataTable)Session["cart"];
+
                 string sl = cart.Rows.Count.ToString();
-                /* Response.Write(sl);*/
-                string output = "";
-                foreach (DataRow row in cart.Rows)
+                *//* Response.Write(sl);*//*
+                string output = "";*/
+
+                /*foreach (DataRow row in cart.Rows)
                 {
                     output += @"<li class='cart-products__product'>
           <div class='cart-products__inner'>
@@ -66,7 +69,7 @@ namespace firefood
 
 </li>";
                 }
-                cart_products.InnerHtml = output;
+                cart_products.InnerHtml = output;*/
                 
             }
             else

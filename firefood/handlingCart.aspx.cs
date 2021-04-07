@@ -10,68 +10,79 @@ namespace firefood
 {
     public partial class handlingCart : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private List<CartProduct> cartProducts;
+        public void delete( string idProduct, List<CartProduct> cartProducts)
         {
-           // string id, image, name, price;
-            string action = Request.QueryString["action"];
-            string idProduct = Request.QueryString["id"];
-            DataTable cart = new DataTable();
-            if(action == "delete")
-            {
-                cart = (DataTable)Session["cart"];
-                foreach (DataRow pr in cart.Rows)
+                Response.Write("<script>confirm('Do you want to delete this product from cart')</script>");
+                int length = cartProducts.Count;
+                for (int i = 0; i < length; i++)
                 {
-                    if (pr["id"].ToString() == idProduct)
+                    if (cartProducts[i].Id == idProduct)
                     {
-                        pr.Delete();
+                        cartProducts.RemoveAt(i);
                         break;
                     }
                 }
-                Response.Redirect("Cart.aspx");
-                return;
-            }
-            else if(action == "minus")
+
+            Session["cart"] = cartProducts;
+
+        }
+        public void minus( string idProduct, List<CartProduct> cartProducts)
+        {
+            int length = cartProducts.Count;
+            for (int i = 0; i < length; i++)
             {
-                cart = (DataTable)Session["cart"];
-                foreach (DataRow pr in cart.Rows)
+                if (cartProducts[i].Id == idProduct)
                 {
-                    if (pr["id"].ToString() == idProduct)
+                    if (cartProducts[i].quantity > 1)
                     {
-                        if (int.Parse(pr["quantity"].ToString()) > 1)
-                        {
-                            pr["quantity"] = int.Parse(pr["quantity"].ToString()) - 1;
-                            break;
-                        }
-                        else
-                        {
-                            pr["quantity"] = 1;
-                            break;
-                        }
-                        
+                        cartProducts[i].quantity -= 1;
+                        break;
+                    }
+                    else
+                    {
+                        this.delete( idProduct, cartProducts);
+                        break;
                     }
                 }
-                Response.Redirect("Cart.aspx");
-                return;
+            }
+            Session["cart"] = cartProducts;
+        }
+        public void plus(string idProduct, List<CartProduct> cartProducts)
+        {
+            int length = cartProducts.Count;
+            for (int i = 0; i < length; i++)
+            {
+                if (cartProducts[i].Id == idProduct)
+                {
+                    cartProducts[i].quantity = cartProducts[i].quantity + 1;
+                    break;
+                }
+            }
+            Session["cart"] = cartProducts;
+        }
+        public void Page_Load(object sender, EventArgs e)
+        {
+            // string id, image, name, price;
+            cartProducts = (List<CartProduct>)Session["cart"];
+            string action = Request.QueryString["action"];
+            string idProduct = Request.QueryString["id"];
+            if(action == "delete")
+            {
+                this.delete( idProduct, cartProducts);
+                
+            } else if(action == "minus")
+            {
+                this.minus(idProduct, cartProducts);
+                
             }
             else if(action == "plus")
             {
-                cart = (DataTable)Session["cart"];
-                foreach (DataRow pr in cart.Rows)
-                {
-                    if (pr["id"].ToString() == idProduct)
-                    {
-                        pr["quantity"] = int.Parse(pr["quantity"].ToString()) + 1;
-                        break;
-                    }
-                }
-                Response.Redirect("Cart.aspx");
-                return;
+                this.plus(idProduct, cartProducts);
             }
-            else
-            {
-                Response.Redirect("Cart.aspx");
-                return;
-            }
+            
+            Response.Redirect("Cart.aspx");
+             
         }
     }
 }

@@ -83,6 +83,7 @@
     <Content Include="css\Reset.css" />
     <Content Include="css\CartStyle.css" />
     <Content Include="detailedSubPage.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="handlingCart.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="js\CartApp.js" />
@@ -97,6 +98,7 @@
     <Content Include="Cart.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartProduct.cs" />
     <Compile Include="ChildPage.aspx.cs">
       <DependentUpon>ChildPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +112,9 @@
     </Compile>
     <Compile Include="detailedSubPage.aspx.designer.cs">
       <DependentUpon>detailedSubPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="handlingCart.aspx.cs">
       <DependentUpon>handlingCart.aspx</DependentUpon>

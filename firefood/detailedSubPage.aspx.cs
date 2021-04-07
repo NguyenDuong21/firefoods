@@ -17,15 +17,14 @@ namespace firefood
         public Product curentProduct;
 
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
-            detailedProduct.Text = GetData(id);
+            /*detailedProduct.Text = GetData(id);*/
             GetData(id);
         }
 
-        private string GetData(string id)
+        private void GetData(string id)
         {
             string jsonFilePath = Server.MapPath("~/products.json"); 
             /*@"D:\firefood\firefood\firefood\products.json";*/
@@ -42,32 +41,18 @@ namespace firefood
             {
                 if (obj["products"][i]["id"] == id)
                 {
-                    /*curentProduct = obj["products"][i];
-                    break;*/
-                    return @"<div class='row' style='margin - top: 100px;'>
-                  <div class='col l-6' id='product_img' runat='server'>
-                  <img style='width:100%;' src = '" + obj["products"][i]["image"] + @"' alt='Alternate Text'/>
-               </div>
-               <div class='col l-6'>
-                  <div class='Body'>
-                     <div class='Main_Body'>
-                        <div class='Left_Main_Body'>
-                           <div class='Khunggia'>
-                              <div class='Giasp'>
-                                 <span class='Giacuthe'>" + obj["products"][i]["name"] + @"</span>
-                              </div>
-                              <div class='Open_Time'>
-                                 <div class='open'>
-                                    <span class='stt online' title='địa chỉ'>" + obj["products"][i]["address"] + @"</span>
-                                 </div>
-                                 <div class='time'>
-                                    <span style='font-weight:bold; font-size:1.5rem;'>" + obj["products"][i]["price"] + @"CN</span>
-                                 </div>
-                              </div>
-                           </div>";
+                    curentProduct = new Product
+                    {
+                        Id = obj["products"][i]["id"],
+                        Name = obj["products"][i]["name"],
+                        Address = obj["products"][i]["address"],
+                        Type = obj["products"][i]["type"],
+                        Price = obj["products"][i]["price"],
+                        Image = obj["products"][i]["image"]
+                    };
+                    break;
                 }
             }
-            return "";
         }
 
         public void AddToCart(object sender, EventArgs e)
@@ -100,9 +85,12 @@ namespace firefood
                     idProduct = obj["products"][i]["id"];
                 }
             }
-            DataTable cart = new DataTable();
-            if (Session["cart"] == null)
+            CartProduct cartProduct = new CartProduct(idProduct, image, name, price, 1);
+            List<CartProduct> cartProducts = (List<CartProduct>)Session["cart"];
+            cartProducts.Add(cartProduct);
+            /*if (Session["cart"] == null)
             {
+                
                 //chưa có giỏ hàng, tạo giỏ hàng 
                 cart.Columns.Add("id");
                 cart.Columns.Add("image");
@@ -132,7 +120,7 @@ namespace firefood
                     cart.Rows.Add(idProduct, image, name, price, 1);
                 }
                 Session["cart"] = cart;
-            }
+            }*/
         }
     }
 }
