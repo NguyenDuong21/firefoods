@@ -1,0 +1,76 @@
+﻿{
+  "products": [
+    {
+      "id": "1",
+      "name": "Bánh mì",
+      "address": "Đội Cấn, Ba Đình, Hà Nội",
+      "type": "Truyền thống",
+      "price": "20000",
+      "image": "./images/banhmi.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Phở thìn",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "90000",
+      "image": "./images/phothin.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Nem nướng",
+      "address": "Nguyễn Hiền, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "30000",
+      "image": "./images/nemnuong.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Kem Tràng Tiền",
+      "address": "Tràng Tiền, Hoàn Kiếm, Hà Nội",
+      "type": "Truyền thống",
+      "price": "20000",
+      "image": "./images/kemtrangtien.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Bún đậu mắm tôm",
+      "address": "Nguyễn Hiền, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "35000",
+      "image": "./images/bundaumamtom.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Bún chả",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "30000",
+      "image": "./images/buncha.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Bún ốc",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "25000",
+      "image": "./images/bunoc.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Xoài dầm",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "15000",
+      "image": "./images/xoaidam.jpg"
+    },
+    {
+      "id": "9",
+      "name": "cháo lòng",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "45000",
+      "image": "./images/chaolong.jpg"
+    }
+  ]
+}

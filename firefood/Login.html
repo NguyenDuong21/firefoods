@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/LoginStyle.css">
+    <!--<link rel="stylesheet" href="./css/all.css">-->
+    <link href="../css/Reset.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <form action="Login.aspx" method="post" class="now-login" onsubmit="return handelSubmit()">
+            <div class="content">
+                <h2 class="title">Sign up</h2>
+                <div class="login-via">
+                    <div class="item-login">
+                        <a href="./register.html" class="btn-block" style="background-color: #329900;">
+                            Đăng ký ngay
+                        </a>
+                    </div>
+
+                    <div class="item-login">
+                        <a href="#" class="btn-block" style="background-color: #187caa;">
+                            Facebook
+                        </a>
+                    </div>
+
+                    <div class="item-login">
+                        <a href="#" class="btn-block" style="background-color: #ff5252;">
+                            Google
+                        </a>
+                    </div>
+
+                    <p class="text">Hoặc đăng nhập bằng tài khoản của bạn</p>
+                    <div class="alert-danger"></div>
+
+                    <div class="form-login-input">
+                        <div class="field-group">
+                            <div class="input-group">
+                                <input id="email" type="text" placeholder="Tài khoản" name="email">
+                            </div>
+                            <div class="input-group">
+                                <input id="password" type="password" placeholder="Mật khẩu" name="password">
+                            </div>
+                        </div>
+
+                        <div class="form-group clearfix">
+                            <div class="float-left">
+                                <input type="checkbox" id="RememberMe" checked="">
+                                <label for="RememberMe">Lưu thông tin đăng nhập</label>
+                            </div>
+                            <span class="float-right">
+                                <a href="#">Quên mật khẩu?</a>
+                            </span>
+                        </div>
+                        <button type="submit" class="btn-block">Đăng nhập</button>
+                    </div>
+                    <br>
+                    <div class="login-mess-policy">Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với <a style="color: #0495ba; border-bottom: 2px solid; text-decoration: none !important;" target="_blank" href="https://now.vn/gioi-thieu#footer-bottom">Chính sách quy định của Foody</a></div>
+                </div>
+        </form>
+    </div>
+    </div>
+    <script src="./js/LoginApp.js"></script>
+</body>
+</html>
