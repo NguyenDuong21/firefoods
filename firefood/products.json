@@ -71,6 +71,30 @@
       "type": "Truyền thống",
       "price": "45000",
       "image": "./images/chaolong.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Tiết Canh",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "25000",
+      "image": "./images/tietcanh.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Nem chua Thanh Hóa",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "30000",
+      "image": "./images/nemchua.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Canh Chua",
+      "address": "Lò Đúc, Hai Bà Trưng, Hà Nội",
+      "type": "Truyền thống",
+      "price": "50000",
+      "image": "./images/canhchua.jpg"
     }
   ]
 }

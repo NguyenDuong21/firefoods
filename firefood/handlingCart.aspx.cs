@@ -13,7 +13,6 @@ namespace firefood
         private List<CartProduct> cartProducts;
         public void delete( string idProduct, List<CartProduct> cartProducts)
         {
-                Response.Write("<script>confirm('Do you want to delete this product from cart')</script>");
                 int length = cartProducts.Count;
                 for (int i = 0; i < length; i++)
                 {

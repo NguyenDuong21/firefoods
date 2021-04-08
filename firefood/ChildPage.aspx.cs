@@ -32,7 +32,7 @@ namespace firefood
 
             var len = obj["products"].Length;
 
-            
+                
             for (int i = 0; i < len; i++)
             {
                 var product = new Product

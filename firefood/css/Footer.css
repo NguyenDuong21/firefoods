@@ -226,10 +226,12 @@ footer .container {
     }
 
         footer .container {
+            
             flex-direction: column;
         }
 
             footer .container .noi-dung {
+                width:100% !important;
                 margin-right: 0;
                 margin-bottom: 40px;
             }

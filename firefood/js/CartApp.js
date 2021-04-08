@@ -10,7 +10,7 @@
     let priceValueTotal = document.getElementById("prices_value_final");
 
     let prices = document.getElementsByClassName("price_sp");
-    let quantity = document.getElementsByClassName("quantity_lb");
+    let quantity = document.querySelectorAll("[class*='quantity_lb']");
     let pricesArr = [].slice.call(prices);
     let quantityArr = [].slice.call(quantity);
     let totalPrice = 0;
@@ -34,8 +34,19 @@ function DeleteProduct (id) {
 }
 
 function minusProduct(id) {
-        let url = "handlingCart.aspx?action=minus&id=" + id;
-        window.location = url
+    let price_sp = document.getElementsByClassName('quantity_lb'+id)[0].innerHTML;
+    console.log(price_sp);
+    if (price_sp == '1') {
+        console.log('da vao');
+        let result = confirm("Bạn có muốn xóa sản phẩm này");
+        if (result) {
+            return DeleteProduct(id);
+        } else {
+            return;
+        }
+    }
+    let url = "handlingCart.aspx?action=minus&id=" + id;
+    window.location = url
 }
 function plusProduct(id) {
     let url = "handlingCart.aspx?action=plus&id=" + id;

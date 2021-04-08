@@ -1,14 +1,16 @@
 ﻿.container{
     margin: 1rem 0;
 }
-.row{
-    margin: 1rem 0;
+.row {
+
+    margin: 0 auto;
+    max-width:1200px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
 }
 /* Create four equal columns that floats next to each other */
 .item-restaurant {
-    float: left;
-    width: 20%;
-    padding: 0 10px;
     transition: all 0.5s ease;
     border-radius: 10px;
 }
@@ -19,18 +21,17 @@
         box-shadow: 0 8px 6px -6px black;
     }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 .info-basic-res {
     padding: 5px 8px;
     border-bottom: 1px solid #ebebeb
 }
-
+.image{
+    height:65%;
+}
+.image img{
+    height:100%;
+}
 .info-restaurant .name-res {
     font-size: 14px;
     font-weight: 700;
@@ -114,3 +115,15 @@
         vertical-align: middle;
         color: red;
     }
+
+@media only screen and (max-width: 992px) {
+    .row {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 576px) {
+    .row {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}

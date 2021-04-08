@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="./css/Header.css" />
     <link rel="stylesheet" href="./css/Reset.css" />
     <link rel="shortcut icon" href="./images/icon.png">
+    <style>
+        label{
+            padding-top:0.5rem;
+        }
+    </style>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
@@ -44,42 +49,45 @@
                                 <span>Food Trading</span>
                             </a>
                             <ul class="cart-products__products" id="cart_products" runat="server">
-                                <%foreach (var product in products) {
-                                        Response.Write(
-                                            @"<li class='cart-products__product'>
-   <div class='cart-products__inner'>
-      <div class='cart-products__img'>
-         <a href = '#'>
-         <img src='"+product.Image+@"' alt='#'>
-         </a>
-      </div>
-      <div class='cart-products__content'>
-         <div class='cart-products__content--inner'>
-            <div class='cart-products__desc'>
-               <a class='cart-products__name' href='#'>"+product.Name+@"</a>
-               <p class='cart-products__badge'></p>
-               <p class='cart-products__actions'>
-                  <span onclick='DeleteProduct(" + product.Id + @")' class='cart-products__del'>Xóa</span>
-                  <span class='cart-products__buy-later'>Để dành mua sau</span>
-               </p>
-            </div>
-            <div class='cart-products__details'>
-               <div class='cart-products__pricess'>
-                  <p class='cart-products__real-prices'><span class='price_sp'>"+product.Price+ @"</span>đ</p>
-               </div>
-               <div class= 'cart-products__qty'>
-                  <div class= 'CartQty__StyledCartQty-o1bx97-0 iaIXXn'>
-                     <span class= 'qty-decrease qty-disable' onclick='minusProduct("+ product.Id + @")'> - </span>
-                     <label class='quantity_lb'>" + product.quantity+@"</label>
-                     <span class= 'qty-increase' onclick='plusProduct("+product.Id+@")'> +</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</li>");
-                                    } %>
+                                <%
+                                        foreach (var product in products) {
+                                            Response.Write(
+                                                @"<li class='cart-products__product'>
+                                               <div class='cart-products__inner'>
+                                                  <div class='cart-products__img'>
+                                                     <a href = '#'>
+                                                     <img src='"+product.Image+@"' alt='#'>
+                                                     </a>
+                                                  </div>
+                                                  <div class='cart-products__content'>
+                                                     <div class='cart-products__content--inner'>
+                                                        <div class='cart-products__desc'>
+                                                           <a class='cart-products__name' href='#'>"+product.Name+@"</a>
+                                                           <p class='cart-products__badge'></p>
+                                                           <p class='cart-products__actions'>
+                                                              <span onclick='DeleteProduct(" + product.Id + @")' class='cart-products__del'>Xóa</span>
+                                                              <span class='cart-products__buy-later'>Để dành mua sau</span>
+                                                           </p>
+                                                        </div>
+                                                        <div class='cart-products__details'>
+                                                           <div class='cart-products__pricess'>
+                                                              <p class='cart-products__real-prices'><span class='price_sp'>"+product.Price+ @"</span></p>
+                                                           </div>
+                                                           <div class= 'cart-products__qty'>
+                                                              <div class= 'CartQty__StyledCartQty-o1bx97-0 iaIXXn'>
+                                                                 <span class= 'qty-decrease qty-disable' onclick='minusProduct("+ product.Id + @")'> - </span>
+                                                                 <label class='quantity_lb"+ product.Id + @"'>" + product.quantity+@"</label>
+                                                                 <span class= 'qty-increase' onclick='plusProduct("+product.Id+@")'> +</span>
+                                                              </div>
+                                                           </div>
+                                                        </div>
+                                                     </div>
+                                                  </div>
+                                               </div>
+                                            </li>");   
+                                        }
+                                    
+                                     %>
                             </ul>
                         </div>
                 </div>
