@@ -14,6 +14,14 @@ namespace firefood
         public List<Product> products = new List<Product>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["current_user"] != null)
+            {
+                userName.Text = (string)Session["current_user"];
+            }
+            else
+            {
+                userName.Text = "Đăng nhập";
+            }
             /*listProduct.Text = getData();*/
             getData();
         }
