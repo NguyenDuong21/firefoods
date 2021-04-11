@@ -17,7 +17,7 @@ namespace firefood
             }
             else
             {
-                userName.Text = "no user";
+                userName.Text = "Đăng nhập";
             }
         }
     }

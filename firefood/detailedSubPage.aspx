@@ -11,24 +11,16 @@
    </head>
    <body>
       <!-- header -->
-      <!-- header -->
-      <div class="navbar">
-         <a href="../HomePage.aspx">
-         <img src="../images/icon.png" style="width:20px" alt="Alternate Text" />
-         </a>
-         <a href="./ChildPage.aspx">Món truyền thống</a>
-         <a href="./ChildPage.aspx">Món truyền thống</a>
-         <a href="./ChildPage.aspx">Món nước</a>
-         <a href="./ChildPage.aspx">Món nướng</a>
-         <a href="./ChildPage.aspx">Món ngọt</a>
-         <a href="../Cart.aspx">Giỏ hàng</a>
-          <div class="dropdown">
-                <asp:Label ID="userName" CssClass="dropbtn" runat="server" Text=""></asp:Label>
-              <div class="dropdown-content">
-                  <a href="#" id="login_logout">Đăng kí</a>
-              </div>
-          </div>
-      </div>
+    <div class="header">
+      <a href="./HomePage.aspx" class="logo">
+          FireFoods
+      <div class="header-right">
+        <a class="active" href="./HomePage.aspx">Trang chủ</a>
+        <a href="./ChildPage.aspx">Món Truyền Thống</a>
+        <a href="./ChildPage.aspx">Món Châu Âu</a>
+        <asp:HyperLink id="userName" NavigateUrl="./Login.html" Text="" runat="server"/> 
+  </div>
+</div>
       <form id="form1" runat="server" onsubmit="AddToCart()">
          <div class="grid wide">
               <%Response.Write(@"<div class='row' style='margin - top: 100px;'>

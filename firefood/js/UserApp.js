@@ -1,14 +1,29 @@
 ﻿function CheckLogined() {
-    let checkLogin = document.getElementById("userName").textContent;
-    let log = document.getElementById("login_logout");
-    if (checkLogin == "Đăng nhập") {
-        let log = document.getElementById("login_logout");
-        log.textContent = "Đăng nhập";
-        log.href = "./Login.html";
-    } else {
-        log.textContent = "Đăng xuất";
-        log.href = "./Logout.aspx";
-    }
-}
+    let checkLogin = document.getElementById("userName");
 
+    if (checkLogin.textContent == "Đăng nhập") {
+        let name = checkLogin.textContent;
+        checkLogin.addEventListener("mouseover", function () {
+            checkLogin.href = "./Login.html"
+        })
+
+        checkLogin.addEventListener("mouseout", function () {
+            checkLogin.textContent = name;
+            checkLogin.href = "./Login.html";
+        })
+    } else {
+        let name = checkLogin.textContent;
+        checkLogin.addEventListener("mouseover", function () {
+            checkLogin.textContent = "Đăng xuất";
+            checkLogin.href = "./Logout.aspx"
+        })
+
+        checkLogin.addEventListener("mouseout", function () {
+            checkLogin.textContent = name;
+            checkLogin.href = "#";
+        })
+    }
+
+}
 CheckLogined();
+
