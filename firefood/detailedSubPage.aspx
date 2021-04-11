@@ -18,7 +18,8 @@
         <a class="active" href="./HomePage.aspx">Trang chủ</a>
         <a href="./ChildPage.aspx">Món Truyền Thống</a>
         <a href="./ChildPage.aspx">Món Châu Âu</a>
-        <asp:HyperLink id="userName" NavigateUrl="./Login.html" Text="" runat="server"/> 
+        <a href="./Cart.aspx">Giỏ Hàng</a>
+        <asp:HyperLink id="userName" NavigateUrl="#" Text="" runat="server"/> 
   </div>
 </div>
       <form id="form1" runat="server" onsubmit="AddToCart()">
@@ -107,5 +108,12 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
          </div>
       </footer>
+       <script src="./js/UserApp.js"></script>
+
+       <script>
+           document.getElementById("themgio").addEventListener("click", function () {
+               window.alert = "Đã thêm vào giỏ hàng";
+           });
+       </script>
    </body>
 </html>

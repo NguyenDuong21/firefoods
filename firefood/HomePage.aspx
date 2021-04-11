@@ -23,6 +23,7 @@
         <a class="active" href="./HomePage.aspx">Trang chủ</a>
         <a href="./ChildPage.aspx">Món Truyền Thống</a>
         <a href="./ChildPage.aspx">Món Châu Âu</a>
+        <a href="./Cart.aspx">Giỏ Hàng</a>
         <asp:HyperLink id="userName" NavigateUrl="#" Text="" runat="server"/> 
   </div>
 </div>

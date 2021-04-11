@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CartEmtyl.aspx.cs" Inherits="firefood.CartEmtyl" %>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,7 +39,8 @@
                 <a class="active" href="./HomePage.aspx">Trang chủ</a>
                 <a href="./ChildPage.aspx">Món Truyền Thống</a>
                 <a href="./ChildPage.aspx">Món Châu Âu</a>
-                <asp:HyperLink id="userName" NavigateUrl="./Login.html" Text="" runat="server" />
+                <a href="./Cart.aspx">Giỏ Hàng</a>
+                <asp:HyperLink id="userName" NavigateUrl="#" Text="" runat="server" />
             </div>
     </div>
     <!--header end-->
@@ -105,5 +108,6 @@
         </div>
     </footer>
     <script src="./js/CartApp.js"></script>
+    <script src="./js/UserApp.js"></script>
 </body>
 </html>

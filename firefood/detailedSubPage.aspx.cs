@@ -19,6 +19,14 @@ namespace firefood
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["current_user"] != null)
+            {
+                userName.Text = (string)Session["current_user"];
+            }
+            else
+            {
+                userName.Text = "Đăng nhập";
+            }
             string id = Request.QueryString["id"];
             /*detailedProduct.Text = GetData(id);*/
             GetData(id);

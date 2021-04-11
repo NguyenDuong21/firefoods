@@ -70,7 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CartEmtyl.html" />
+    <Content Include="CartEmtyl.aspx" />
     <Content Include="ChildPage.aspx" />
     <Content Include="css\all.css" />
     <Content Include="css\ChildPage.css" />
@@ -101,6 +101,13 @@
     <Content Include="Cart.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartEmtyl.aspx.cs">
+      <DependentUpon>CartEmtyl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartEmtyl.aspx.designer.cs">
+      <DependentUpon>CartEmtyl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CartProduct.cs" />
     <Compile Include="ChildPage.aspx.cs">
       <DependentUpon>ChildPage.aspx</DependentUpon>

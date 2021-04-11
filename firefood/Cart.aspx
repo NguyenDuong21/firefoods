@@ -30,7 +30,8 @@
         <a class="active" href="./HomePage.aspx">Trang chủ</a>
         <a href="./ChildPage.aspx">Món Truyền Thống</a>
         <a href="./ChildPage.aspx">Món Châu Âu</a>
-        <asp:HyperLink id="userName" NavigateUrl="./Login.html" Text="" runat="server"/> 
+        <a href="./Cart.aspx">Giỏ Hàng</a>
+        <asp:HyperLink id="userName" NavigateUrl="#" Text="" runat="server"/> 
   </div>
 </div>
 
@@ -169,6 +170,7 @@
         </div>
     </footer>
     <script src="./js/CartApp.js"></script>
+    <script src="./js/UserApp.js"></script>
     <script>
         document.getElementById("cart_submit").addEventListener("click", () => {
             window.alert("Đặt hàng thành công");
