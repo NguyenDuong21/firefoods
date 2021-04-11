@@ -15,21 +15,25 @@
    </head>
    <body>
       <!-- header -->
-      <div class="topnav">
-         <a class="active" href="../HomePage.aspx">
+      <div class="navbar">
+         <a href="../HomePage.aspx">
          <img src="../images/icon.png" style="width:20px" alt="Alternate Text" />
          </a>
          <a href="./ChildPage.aspx">Món truyền thống</a>
-         <a href="./ChildPage.aspx">Contact</a>
          <a href="./ChildPage.aspx">Món truyền thống</a>
          <a href="./ChildPage.aspx">Món nước</a>
          <a href="./ChildPage.aspx">Món nướng</a>
          <a href="./ChildPage.aspx">Món ngọt</a>
          <a href="../Cart.aspx">Giỏ hàng</a>
-         <asp:Label ID="userName" CssClass="infor_user" runat="server" Text=""></asp:Label>
+          <div class="dropdown">
+                <asp:Label ID="userName" CssClass="dropbtn" runat="server" Text=""></asp:Label>
+              <div class="dropdown-content">
+                  <a href="#" id="login_logout">Đăng kí</a>
+              </div>
+          </div>
       </div>
       <!--container-->
-      <div class="container">      
+      <div class="grid">      
               <div class="row">
                   <%foreach (var product in products)
                       {
@@ -106,5 +110,6 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
          </div>
       </footer>
+       <script src="./js/UserApp.js"></script>
    </body>
 </html>

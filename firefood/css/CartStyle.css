@@ -1,5 +1,7 @@
 ﻿.container-cart {
     width: 100%;
+    display:block;
+    padding:0;
     /* padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
@@ -21,7 +23,7 @@
 /* cart and total price column*/
 .cart-inner {
     /* width: 910px; */
-    width: 70%;
+    width: 100%;
 }
 
 .cart-total-prices {
@@ -195,7 +197,7 @@
     }
 /* total-prices */
 .cart-total-prices {
-    width: calc(100% - 925px);
+    width: 100%;
     margin-top: 31px;
 }
 

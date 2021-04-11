@@ -12,11 +12,26 @@ namespace firefood
     {
         public List<CartProduct> products = null;
         protected void Page_Load(object sender, EventArgs e)
+
         {
+            if (Session["current_user"] != null)
+            {
+                userName.Text = (string)Session["current_user"];
+            }
+            else
+            {
+                userName.Text = "no user";
+            }
+
             if (Session["cart"] != null)
             {
                 products = (List<CartProduct>)Session["cart"];
-                    
+
+            }
+
+            if(Session["current_user"] == null)
+            {
+                Response.Redirect("CartEmtyl.html");
             }
         }
     }
