@@ -11,7 +11,7 @@ namespace firefood
 {
 
 
-    public partial class WebForm1
+    public partial class CartEmtyl
     {
 
         /// <summary>
@@ -22,14 +22,5 @@ namespace firefood
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink userName;
-
-        /// <summary>
-        /// cart_products control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cart_products;
     }
 }

@@ -31,7 +31,7 @@ namespace firefood
 
             if(Session["current_user"] == null)
             {
-                Response.Redirect("CartEmtyl.html");
+                Response.Redirect("CartEmtyl.aspx");
             }
         }
     }

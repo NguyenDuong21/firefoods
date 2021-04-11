@@ -15,23 +15,17 @@
    </head>
    <body>
       <!-- header -->
-      <div class="navbar">
-         <a href="../HomePage.aspx">
-         <img src="../images/icon.png" style="width:20px" alt="Alternate Text" />
-         </a>
-         <a href="./ChildPage.aspx">Món truyền thống</a>
-         <a href="./ChildPage.aspx">Món truyền thống</a>
-         <a href="./ChildPage.aspx">Món nước</a>
-         <a href="./ChildPage.aspx">Món nướng</a>
-         <a href="./ChildPage.aspx">Món ngọt</a>
-         <a href="../Cart.aspx">Giỏ hàng</a>
-          <div class="dropdown">
-                <asp:Label ID="userName" CssClass="dropbtn" runat="server" Text=""></asp:Label>
-              <div class="dropdown-content">
-                  <a href="#" id="login_logout">Đăng kí</a>
-              </div>
-          </div>
-      </div>
+    <div class="header">
+      <a href="./HomePage.aspx" class="logo">
+          FireFoods
+      <div class="header-right">
+        <a id="home" href="./HomePage.aspx">Trang chủ</a>
+        <a id="child1" href="./ChildPage.aspx?1">Món Truyền Thống</a>
+        <a id="child2" href="./ChildPage.aspx?2">Món Châu Âu</a>
+        <a id="card" href="./Cart.aspx">Giỏ Hàng</a>
+        <asp:HyperLink id="userName" NavigateUrl="#" Text="" runat="server"/> 
+  </div>
+</div>
       <!--container-->
       <div class="grid">      
               <div class="row">
