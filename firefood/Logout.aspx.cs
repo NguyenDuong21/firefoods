@@ -13,7 +13,8 @@ namespace firefood
         {
             if (Session["current_user"] != null)
             {
-                Session["current_user"] = null;
+                Session.Abandon();
+                /*Session["current_user"] = null;*/
                 Response.Redirect("HomePage.aspx");
             }
         }

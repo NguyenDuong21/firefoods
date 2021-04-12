@@ -83,6 +83,7 @@ namespace firefood
             string name = "";
             string price = "";
             string idProduct = "";
+            int check = 0;
             for (int i= 0; i < len; i++)
             {
                 if (obj["products"][i]["id"] == idRequest)
@@ -93,9 +94,20 @@ namespace firefood
                     idProduct = obj["products"][i]["id"];
                 }
             }
+
             CartProduct cartProduct = new CartProduct(idProduct, image, name, price, 1);
             List<CartProduct> cartProducts = (List<CartProduct>)Session["cart"];
-            cartProducts.Add(cartProduct);
+            for (int i=0; i < cartProducts.Count; i++){
+                if(cartProducts[i].Id == idProduct)
+                {
+                    check = 1;
+                    cartProducts[i].quantity += 1;
+                }
+            }
+            if (check == 0)
+            {
+                cartProducts.Add(cartProduct);
+            }
             /*if (Session["cart"] == null)
             {
                 
