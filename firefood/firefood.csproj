@@ -88,6 +88,7 @@
     <Content Include="handlingCart.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="js\CartApp.js" />
+    <Content Include="js\HomaPage.js" />
     <Content Include="js\HomePageApp.js" />
     <Content Include="js\LoginApp.js" />
     <Content Include="js\RegisterApp.js" />

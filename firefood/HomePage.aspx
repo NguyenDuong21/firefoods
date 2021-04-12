@@ -424,7 +424,7 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
     </footer>
-    <script src="./js/HomePage.js"></script>
+    <script src="./js/HomaPage.js"></script>
     <script src="./js/UserApp.js"></script>
 </body>
 </html>
